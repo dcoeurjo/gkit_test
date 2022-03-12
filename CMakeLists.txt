@@ -28,6 +28,12 @@ target_link_libraries(gkit OpenGL::GL ${GLEW_LIBRARIES} ${SDL2_LIBRARY} ${SDL2_I
 target_compile_features(gkit PUBLIC cxx_std_11)
 target_sources(gkit  PRIVATE  ${gkit_files}  PUBLIC  ${gkit_headers})
 
+# IDEs should put the headers in a nice place
+source_group(
+  TREE "${PROJECT_SOURCE_DIR}/src/gKit/"
+  PREFIX "Header Files"
+  FILES ${gkit_headers})
+
 
 # add the executable
 add_executable(tuto7_camera tutos/tuto7_camera.cpp)
