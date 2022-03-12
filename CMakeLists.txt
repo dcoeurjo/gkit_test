@@ -26,8 +26,6 @@ target_link_libraries(gkit OpenGL::GL ${GLEW_LIBRARIES} ${SDL2_LIBRARY} ${SDL2_I
 target_compile_features(gkit PUBLIC cxx_std_11)
 
 
-
 # add the executable
 add_executable(tuto7_camera "tutos/tuto7_camera.cpp" ${gkit_files})
 target_link_libraries(tuto7_camera PUBLIC gkit)
-set_target_properties(tuto7_camera PROPERTIES RUNTIME_OUTPUT_DIRECTORY bin)
