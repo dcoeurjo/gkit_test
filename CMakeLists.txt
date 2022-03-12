@@ -37,5 +37,5 @@ source_group(
 
 # add the executable
 add_executable(tuto7_camera tutos/tuto7_camera.cpp)
-target_include_directories(tuto7_camera PUBLIC "$PROJECT_SOURCE_DIR/tutos/")
+target_include_directories(tuto7_camera PUBLIC "$PROJECT_SOURCE_DIR/srec/gKit")
 target_link_libraries(tuto7_camera PUBLIC gkit)
