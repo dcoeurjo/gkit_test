@@ -19,11 +19,13 @@ endif()
 
 # gkit library
 file(GLOB gkit_files src/gKit/*.cpp)
-add_library(gkit STATIC ${gkit_files})
+file(GLOB gkit_headers src/gKit/*.h)
+
+add_library(gkit STATIC ${gkit_files} ${gkit_headers})
 target_include_directories(gkit PUBLIC ${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS})
-target_include_directories(gkit PUBLIC ${SDL2_INCLUDE_DIR})
 target_link_libraries(gkit OpenGL::GL ${GLEW_LIBRARIES} ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES})
 target_compile_features(gkit PUBLIC cxx_std_11)
+target_sources(gkit  PRIVATE  ${gkit_files}  PUBLIC  ${gkit_headers})
 
 
 # add the executable
