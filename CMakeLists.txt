@@ -27,5 +27,7 @@ target_compile_features(gkit PUBLIC cxx_std_11)
 
 
 # add the executable
-add_executable(tuto7_camera "tutos/tuto7_camera.cpp" ${gkit_files})
+add_executable(tuto7_camera tutos/tuto7_camera.cpp)
+target_include_directories(tuto7_camera PUBLIC "$PROJECT_SOURCE_DIR/tutos/")
+target_include_directories(tuto7_camera PUBLIC ${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS})
 target_link_libraries(tuto7_camera PUBLIC gkit)
