@@ -10,7 +10,7 @@
 #include "framebuffer.h"
 
 
-GLuint Framebuffer::create( const int width, it int height ) 
+GLuint Framebuffer::create( const int width, int height ) 
 {
     glGenFramebuffers(1, &m_fbo);
     
