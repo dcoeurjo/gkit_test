@@ -10,7 +10,7 @@
 #include "framebuffer.h"
 
 
-GLuint Framebuffer::create( const int width, const int height ) 
+GLuint Framebuffer::create( const int width, it int height ) 
 {
     glGenFramebuffers(1, &m_fbo);
     
@@ -87,7 +87,7 @@ void Framebuffer::bind( const GLuint program, const bool color, const bool depth
             printf("[oops] %s: not active... undefined draw !!\n", label); 
     #endif
         
-    #ifndef GL_VERSION_4_3
+    #ifdef GL_VERSION_4_3
         // lister les sorties du fragment shader
         // fonctionnalite openGL 4.3, n'existe pas sur mac...
         GLint outputs= 0;
