@@ -1,5 +1,7 @@
 [requires]
-spdlog/1.9.2
+sdl/2.0.20
+sdl_image/2.0.5
+glew/2.2.0
 
 [generators]
 cmake
