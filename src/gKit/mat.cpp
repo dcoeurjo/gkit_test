@@ -1,11 +1,11 @@
 
 #include <cassert>
 #include <cstdio>
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <algorithm>
 
 #include "mat.h"
-
 
 float radians( const float deg )
 {
